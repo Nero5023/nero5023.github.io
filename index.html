@@ -451,6 +451,244 @@ git flow release publish TAG // 这是发布
             
               
                 
+                <a class="post-title-link" href="/2016/06/27/swift_initializers/" itemprop="url">
+                  swift初始化笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-27T00:00:00+08:00" content="2016-06-27">
+              2016-06-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS-Develop/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS Develop</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/27/swift_initializers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/swift_initializers/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天复习无聊，就在segmentfault上注册了个账号，然后看到了<a href="https://segmentfault.com/q/1010000005792852?_ea=912951" target="_blank" rel="external">这个</a>关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。</p>
+<h2 id="默认构造器-和-结构体的逐一成员构造器"><a href="#默认构造器-和-结构体的逐一成员构造器" class="headerlink" title="默认构造器 和 结构体的逐一成员构造器"></a>默认构造器 和 结构体的逐一成员构造器</h2><p>如果一个class或struct提供了默认值，同时没有定义任何构造器那么会自动提供一个默认构造器(default initializers)。如：</p>
+<pre><code>class Person {
+    var firstName = &quot;Nero&quot;
+    var lastName = &quot;Zuo&quot;
+}
+let person = Person()
+</code></pre><p>结构体的逐一成员构造器，</p>
+<pre><code>struct Circle {
+    var center: CGPoint = CGPoint(x: 0, y: 2)
+    var radius: CGFloat = 2
+}
+
+let circle0 = Circle(center: CGPoint(x: 0, y: 0), radius: 1) //逐一成员构造器
+let circle1 = Circle() //默认构造器
+</code></pre><h2 id="指定构造器-Designated-和便利构造器-Convenience"><a href="#指定构造器-Designated-和便利构造器-Convenience" class="headerlink" title="指定构造器(Designated)和便利构造器(Convenience)"></a>指定构造器(Designated)和便利构造器(Convenience)</h2><pre><code>class Shape {
+    var lineWidth: CGFloat
+    init(lineWidth: CGFloat) {
+        self.lineWidth = lineWidth
+    }
+
+    convenience init() {
+        self.init(lineWidth: 1)
+    }   
+}
+</code></pre><p>这里<code>init(lineWidth: CGFloat)</code>是指定构造器，<code>convenience init()</code>是便利构造器，使用<code>convenience</code>关键字</p>
+<h3 id="继承中的构造器"><a href="#继承中的构造器" class="headerlink" title="继承中的构造器"></a>继承中的构造器</h3><h4 id="自动继承构造器"><a href="#自动继承构造器" class="headerlink" title="自动继承构造器"></a>自动继承构造器</h4><p> 如果子类没有写任何指定构造器，那么子类就继承继承父类的所有构造器，包括便利构造器，同时你可以增加遍历构造器但不用重写指定构造器</p>
+<pre><code>class Shape {
+    var lineWidth: CGFloat
+    init(lineWidth: CGFloat) {
+        self.lineWidth = lineWidth
+    }
+
+    convenience init() {
+        self.init(lineWidth: 1)
+    }
+}
+
+class Circle: Shape {
+    convenience init(value: Int) {
+        self.init()
+        //self.init(lineWidth: 1) //这同样可以
+    }
+}
+
+let circle0 = Circle()
+let circle1 = Circle(lineWidth: 2)
+let circle2 = circle(value: 1)
+</code></pre><p><strong>注意：</strong>便利构造器一定要调用<em>self</em>的构造的，而不是<em>super</em>。这里看真好像调用了<em>super</em>的，但是这里<em>Circle</em>类自动继承了父类的所有构造器。</p>
+<hr>
+<p>如果子类把所有的指定构造器重写了，那么父类的便利构造器也会自动继承</p>
+<pre><code>class Shape {
+    var lineWidth: CGFloat
+    init(lineWidth: CGFloat) {
+        self.lineWidth = lineWidth
+    }
+
+    convenience init() {
+        self.init(lineWidth: 1)
+    }
+}
+
+class Circle: Shape {
+
+    var radius: CGFloat
+
+    init(radius: CGFloat) {
+        self.radius = radius
+        super.init(lineWidth: 2)
+    }
+
+    override init(lineWidth: CGFloat) {
+        self.radius = 2
+        super.init(lineWidth: lineWidth)
+    }
+
+}
+
+let circle0 = Circle(lineWidth: 1) //成功
+let circle1 = Circle() //成功，父类的便利构造器继承下来了
+let circle2 = Circle(radius: 1) //成功
+</code></pre><p>这里举得例子不是很好，但能说明自动继承，和下面的那段类似代码对比看更好。</p>
+<h4 id="构造器的继承和重写"><a href="#构造器的继承和重写" class="headerlink" title="构造器的继承和重写"></a>构造器的继承和重写</h4><p>当你定义了一个的新的构造器时，那么在此构造器你必须新调用父类的指定构造器（待会儿说道构造过程时会具体讲到）。</p>
+<pre><code>class Shape {
+    var lineWidth: CGFloat
+    init(lineWidth: CGFloat) {
+        self.lineWidth = lineWidth
+    }
+
+    convenience init() {
+        self.init(lineWidth: 1)
+    }
+}
+
+
+class Circle: Shape {
+    var radius: CGFloat
+
+    init(radius: CGFloat) {
+        self.radius = radius
+        super.init(lineWidth: 2)
+    }
+}
+
+let circle0 = Circle(lineWidth: 1) //错误，不能初始化，因为没有重写
+let circle1 = Circle() //错误，不能初始化
+let circle2 = Circle(radius: CGFloat) //成功
+</code></pre><p>这里的父类的<code>init(lineWidth: CGFloat)</code>和<code>convenience init()</code>都不能在子类里用了，因为没有重写。</p>
+<p>重写构造器只能重写父类的指定的构造器，加上关键字<code>override</code>。</p>
+<h4 id="两段式构造过程"><a href="#两段式构造过程" class="headerlink" title="两段式构造过程"></a>两段式构造过程</h4><p><img src="/images/initializerDelegation.png" alt="initializer"></p>
+<h6 id="第一阶段："><a href="#第一阶段：" class="headerlink" title="第一阶段："></a>第一阶段：</h6><p>我的理解是类似不断递归的过程，最下面的子类给自己新的存储属性赋值，然后调用父类的指定构造器（不能调用父类的便利构造器），父类的构造器也是这个过程，不断往上，打到最上面时结束</p>
+<h6 id="第二阶段："><a href="#第二阶段：" class="headerlink" title="第二阶段："></a>第二阶段：</h6><p>此时可以使用<code>self</code>，从上到下对对属性进一步定制化。</p>
+<p>一句话总结指定构造器和便利构造器是指定构造器纵向代理，遍历构造器横向代理</p>
+<h2 id="必要构造器-Required"><a href="#必要构造器-Required" class="headerlink" title="必要构造器(Required)"></a>必要构造器(Required)</h2><p>如果子类中重写或定义了指定构造器，就必须在子类中实现这个必要构造器，且不需要加上<code>override</code>关键字，只需要加上<code>required</code>。</p>
+<p>遇到最多的就是必要构造器就是<code>required init?(coder aDecoder: NSCoder)</code><br>这个在iOS中，如UIView, UIViewController等中经常出现，遵循了<code>NSCoding</code>协议，用于归档转码等。</p>
+<h2 id="可失败构造器"><a href="#可失败构造器" class="headerlink" title="可失败构造器"></a>可失败构造器</h2><p>类似这样的是可失败构造器，这个返回的是这个类的optional。</p>
+<pre><code>init?(){ }
+</code></pre><p>浅见觉得调用这个（便利或指定）的构造器都需要是可失败构造器</p>
+<p>第一次写技术类的博客，有点生硬，多写写应该会好些。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/07/wwdcScholarshipExperience/" itemprop="url">
                   我是如何申请到Apple WWDC Scholarship
                 </a>
@@ -625,7 +863,7 @@ git flow release publish TAG // 这是发布
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -633,7 +871,7 @@ git flow release publish TAG // 这是发布
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -642,7 +880,7 @@ git flow release publish TAG // 这是发布
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
