@@ -92,12 +92,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/28/swift_initializers/index.html">
 <meta property="og:site_name" content="Nero's Nodes">
 <meta property="og:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。">
-<meta property="og:image" content="http://yoursite.com/images/initializerDelegation.png">
-<meta property="og:updated_time" content="2016-06-29T10:37:31.000Z">
+<meta property="og:image" content="http://nero5023.github.io/images/initializerDelegation.png">
+<meta property="og:updated_time" content="2016-06-29T13:33:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift初始化笔记">
 <meta name="twitter:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。">
-<meta name="twitter:image" content="http://yoursite.com/images/initializerDelegation.png">
+<meta name="twitter:image" content="http://nero5023.github.io/images/initializerDelegation.png">
 
 
 
@@ -479,7 +479,7 @@ let circle1 = Circle() //错误，不能初始化
 let circle2 = Circle(radius: CGFloat) //成功
 </code></pre><p>这里的父类的<code>init(lineWidth: CGFloat)</code>和<code>convenience init()</code>都不能在子类里用了，因为没有重写。</p>
 <p>重写构造器只能重写父类的指定的构造器，加上关键字<code>override</code>。</p>
-<h4 id="两段式构造过程"><a href="#两段式构造过程" class="headerlink" title="两段式构造过程"></a>两段式构造过程</h4><p><img src="/images/initializerDelegation.png" alt="initializer"></p>
+<h4 id="两段式构造过程"><a href="#两段式构造过程" class="headerlink" title="两段式构造过程"></a>两段式构造过程</h4><p><img src="http://nero5023.github.io/images/initializerDelegation.png" alt="initializer"></p>
 <h6 id="第一阶段："><a href="#第一阶段：" class="headerlink" title="第一阶段："></a>第一阶段：</h6><p>我的理解是类似不断递归的过程，最下面的子类给自己新的存储属性赋值，然后调用父类的指定构造器（不能调用父类的便利构造器），父类的构造器也是这个过程，不断往上，打到最上面时结束</p>
 <h6 id="第二阶段："><a href="#第二阶段：" class="headerlink" title="第二阶段："></a>第二阶段：</h6><p>此时可以使用<code>self</code>，从上到下对对属性进一步定制化。</p>
 <p>一句话总结指定构造器和便利构造器是指定构造器纵向代理，遍历构造器横向代理</p>
