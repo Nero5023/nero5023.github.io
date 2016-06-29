@@ -302,156 +302,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/27/git-flow_and_semantic_versioning/" itemprop="url">
-                  版本控制及版本号的应用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-27T00:00:00+08:00" content="2016-06-27">
-              2016-06-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/项目管理/" itemprop="url" rel="index">
-                    <span itemprop="name">项目管理</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/27/git-flow_and_semantic_versioning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/git-flow_and_semantic_versioning/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="语义化版本-Semantic-Versioning"><a href="#语义化版本-Semantic-Versioning" class="headerlink" title="语义化版本 Semantic Versioning"></a>语义化版本 Semantic Versioning</h3><p>今天复习毛概，好无聊，就找了昨天看swift package manager上面有一个<a href="http://semver.org/" target="_blank" rel="external">Semantic Versioning（语义化版本）</a>的链接，讲了些版本号的格式，作用。原来对这版本号不是很了解，觉得这个东西蛮主观的，但现在发现原来还有这么大的用处，觉得这个可以很好地管理项目且很好理解。</p>
-<p>版本格式：主版本号.次版本号.修订号 </p>
-<ol>
-<li>主版本号：当你做了不兼容的 API 修改，</li>
-<li>次版本号：当你做了向下兼容的功能性新增，</li>
-<li>修订号：当你做了向下兼容的问题修正。</li>
-</ol>
-<p>注意点：（x.y.z）</p>
-<ol>
-<li>禁止在数字前方补零，如01</li>
-<li>处于开发初始阶段时候用0.y.z，1.0.0</li>
-<li>y增加时，z归0。x增加时，y,z归0。</li>
-<li>修订号 Z（x.y.Z | x &gt; 0）“必须 MUST ”在只做了向下兼容的修正时才递增。</li>
-<li>次版本号 Y（x.Y.z | x &gt; 0）“必须 MUST ”在有向下兼容的新功能出现时递增。</li>
-<li>主版本号 X（X.y.z | X &gt; 0）“必须 MUST ”在有任何不兼容的修改被加入公共 API 时递增。在任何公共 API 的功能被标记为弃用时也“必须 MUST ”递增。</li>
-<li>其他详见链接里面</li>
-</ol>
-<h3 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h3><p>去参加WWDC期间，晚上和舍友Adam聊到了git，我说我自己用git就一条分支，觉得没有真正发挥git的强大之处，然后他就推荐给我了git flow，到了现在才看，惭愧。</p>
-<p><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="external">Git flow</a>是一个基于git的管理解决方案，是git的扩展集</p>
-<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>git flow init //原来已经有git或没有都可以
-</code></pre><h4 id="特性-Feature"><a href="#特性-Feature" class="headerlink" title="特性 Feature"></a>特性 Feature</h4><h5 id="增加新特性"><a href="#增加新特性" class="headerlink" title="增加新特性"></a>增加新特性</h5><pre><code>git flow feature start MYFEATURE
-</code></pre><h5 id="完成新特性"><a href="#完成新特性" class="headerlink" title="完成新特性"></a>完成新特性</h5><pre><code>git flow feature finish MYFEATURE
-</code></pre><h5 id="发布新特性"><a href="#发布新特性" class="headerlink" title="发布新特性"></a>发布新特性</h5><pre><code>git flow feature publish MYFEATURE
-</code></pre><h4 id="Release-版本"><a href="#Release-版本" class="headerlink" title="Release 版本"></a>Release 版本</h4><h5 id="开始准备release版本"><a href="#开始准备release版本" class="headerlink" title="开始准备release版本"></a>开始准备release版本</h5><pre><code>git flow release start TAG // TAG如1.2.0
--------------------------------------------
-git flow release publish TAG // 这是发布
-</code></pre><h5 id="完成-release-版本"><a href="#完成-release-版本" class="headerlink" title="完成 release 版本"></a>完成 release 版本</h5><pre><code>git flow release finish TAG
-</code></pre><h4 id="紧急修复-hotfix"><a href="#紧急修复-hotfix" class="headerlink" title="紧急修复 hotfix"></a>紧急修复 hotfix</h4><h5 id="开始修复"><a href="#开始修复" class="headerlink" title="开始修复"></a>开始修复</h5><pre><code>git flow hotfix start VERSION // VERSION 如1.2.1
-</code></pre><h5 id="完成修复"><a href="#完成修复" class="headerlink" title="完成修复"></a>完成修复</h5><pre><code>git flow hotfix finish VERSION
-</code></pre><p>另外SourceTree上面很好的支持了Git Flow，所以只要了解其工作原理就行了，不必完全记住命令。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/27/swift_initializers/" itemprop="url">
+                <a class="post-title-link" href="/2016/06/28/swift_initializers/" itemprop="url">
                   swift初始化笔记
                 </a>
               
@@ -465,8 +316,8 @@ git flow release publish TAG // 这是发布
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-27T00:00:00+08:00" content="2016-06-27">
-              2016-06-27
+            <time itemprop="dateCreated" datetime="2016-06-28T00:00:00+08:00" content="2016-06-28">
+              2016-06-28
             </time>
           </span>
 
@@ -495,8 +346,8 @@ git flow release publish TAG // 这是发布
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/27/swift_initializers/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/swift_initializers/" itemprop="commentsCount"></span>
+                <a href="/2016/06/28/swift_initializers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/28/swift_initializers/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -640,6 +491,155 @@ let circle2 = Circle(radius: CGFloat) //成功
 <pre><code>init?(){ }
 </code></pre><p>浅见觉得调用这个（便利或指定）的构造器都需要是可失败构造器</p>
 <p>第一次写技术类的博客，有点生硬，多写写应该会好些。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/27/git-flow_and_semantic_versioning/" itemprop="url">
+                  版本控制及版本号的应用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-27T00:00:00+08:00" content="2016-06-27">
+              2016-06-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/项目管理/" itemprop="url" rel="index">
+                    <span itemprop="name">项目管理</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/27/git-flow_and_semantic_versioning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/git-flow_and_semantic_versioning/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="语义化版本-Semantic-Versioning"><a href="#语义化版本-Semantic-Versioning" class="headerlink" title="语义化版本 Semantic Versioning"></a>语义化版本 Semantic Versioning</h3><p>今天复习毛概，好无聊，就找了昨天看swift package manager上面有一个<a href="http://semver.org/" target="_blank" rel="external">Semantic Versioning（语义化版本）</a>的链接，讲了些版本号的格式，作用。原来对这版本号不是很了解，觉得这个东西蛮主观的，但现在发现原来还有这么大的用处，觉得这个可以很好地管理项目且很好理解。</p>
+<p>版本格式：主版本号.次版本号.修订号 </p>
+<ol>
+<li>主版本号：当你做了不兼容的 API 修改，</li>
+<li>次版本号：当你做了向下兼容的功能性新增，</li>
+<li>修订号：当你做了向下兼容的问题修正。</li>
+</ol>
+<p>注意点：（x.y.z）</p>
+<ol>
+<li>禁止在数字前方补零，如01</li>
+<li>处于开发初始阶段时候用0.y.z，1.0.0</li>
+<li>y增加时，z归0。x增加时，y,z归0。</li>
+<li>修订号 Z（x.y.Z | x &gt; 0）“必须 MUST ”在只做了向下兼容的修正时才递增。</li>
+<li>次版本号 Y（x.Y.z | x &gt; 0）“必须 MUST ”在有向下兼容的新功能出现时递增。</li>
+<li>主版本号 X（X.y.z | X &gt; 0）“必须 MUST ”在有任何不兼容的修改被加入公共 API 时递增。在任何公共 API 的功能被标记为弃用时也“必须 MUST ”递增。</li>
+<li>其他详见链接里面</li>
+</ol>
+<h3 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h3><p>去参加WWDC期间，晚上和舍友Adam聊到了git，我说我自己用git就一条分支，觉得没有真正发挥git的强大之处，然后他就推荐给我了git flow，到了现在才看，惭愧。</p>
+<p><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="external">Git flow</a>是一个基于git的管理解决方案，是git的扩展集</p>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>git flow init //原来已经有git或没有都可以
+</code></pre><h4 id="特性-Feature"><a href="#特性-Feature" class="headerlink" title="特性 Feature"></a>特性 Feature</h4><h5 id="增加新特性"><a href="#增加新特性" class="headerlink" title="增加新特性"></a>增加新特性</h5><pre><code>git flow feature start MYFEATURE
+</code></pre><h5 id="完成新特性"><a href="#完成新特性" class="headerlink" title="完成新特性"></a>完成新特性</h5><pre><code>git flow feature finish MYFEATURE
+</code></pre><h5 id="发布新特性"><a href="#发布新特性" class="headerlink" title="发布新特性"></a>发布新特性</h5><pre><code>git flow feature publish MYFEATURE
+</code></pre><h4 id="Release-版本"><a href="#Release-版本" class="headerlink" title="Release 版本"></a>Release 版本</h4><h5 id="开始准备release版本"><a href="#开始准备release版本" class="headerlink" title="开始准备release版本"></a>开始准备release版本</h5><pre><code>git flow release start TAG // TAG如1.2.0
+-------------------------------------------
+git flow release publish TAG // 这是发布
+</code></pre><h5 id="完成-release-版本"><a href="#完成-release-版本" class="headerlink" title="完成 release 版本"></a>完成 release 版本</h5><pre><code>git flow release finish TAG
+</code></pre><h4 id="紧急修复-hotfix"><a href="#紧急修复-hotfix" class="headerlink" title="紧急修复 hotfix"></a>紧急修复 hotfix</h4><h5 id="开始修复"><a href="#开始修复" class="headerlink" title="开始修复"></a>开始修复</h5><pre><code>git flow hotfix start VERSION // VERSION 如1.2.1
+</code></pre><h5 id="完成修复"><a href="#完成修复" class="headerlink" title="完成修复"></a>完成修复</h5><pre><code>git flow hotfix finish VERSION
+</code></pre><p>另外SourceTree上面很好的支持了Git Flow，所以只要了解其工作原理就行了，不必完全记住命令。</p>
 
           
         
