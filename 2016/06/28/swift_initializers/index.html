@@ -84,20 +84,17 @@
 
 
 
-<meta name="description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。
-默认构造器 和 结构体的逐一成员构造器如果一个class或struct提供了默认值，同时没有定义任何构造器那么会自动提供一个默认构造器(de">
+<meta name="description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift初始化笔记">
 <meta property="og:url" content="http://yoursite.com/2016/06/28/swift_initializers/index.html">
 <meta property="og:site_name" content="Nero's Nodes">
-<meta property="og:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。
-默认构造器 和 结构体的逐一成员构造器如果一个class或struct提供了默认值，同时没有定义任何构造器那么会自动提供一个默认构造器(de">
+<meta property="og:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。">
 <meta property="og:image" content="http://yoursite.com/images/initializerDelegation.png">
-<meta property="og:updated_time" content="2016-06-29T09:47:41.000Z">
+<meta property="og:updated_time" content="2016-06-29T10:37:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift初始化笔记">
-<meta name="twitter:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。
-默认构造器 和 结构体的逐一成员构造器如果一个class或struct提供了默认值，同时没有定义任何构造器那么会自动提供一个默认构造器(de">
+<meta name="twitter:description" content="今天复习无聊，就在segmentfault上注册了个账号，然后看到了这个关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。">
 <meta name="twitter:image" content="http://yoursite.com/images/initializerDelegation.png">
 
 
@@ -371,7 +368,7 @@
       
 
       
-        <p>今天复习无聊，就在segmentfault上注册了个账号，然后看到了<a href="https://segmentfault.com/q/1010000005792852?_ea=912951" target="_blank" rel="external">这个</a>关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。</p>
+        <p>今天复习无聊，就在segmentfault上注册了个账号，然后看到了<a href="https://segmentfault.com/q/1010000005792852?_ea=912951" target="_blank" rel="external">这个</a>关于swift初始化的问题，以前有仔细看过，就去尝试得回答了一下，但是发现好像都忘了，然后重看了一下。还是应该做好笔记什么的比较好。这篇文章就准备写一下swift的初始化过程，当做笔记。<br><a id="more"></a></p>
 <h2 id="默认构造器-和-结构体的逐一成员构造器"><a href="#默认构造器-和-结构体的逐一成员构造器" class="headerlink" title="默认构造器 和 结构体的逐一成员构造器"></a>默认构造器 和 结构体的逐一成员构造器</h2><p>如果一个class或struct提供了默认值，同时没有定义任何构造器那么会自动提供一个默认构造器(default initializers)。如：</p>
 <pre><code>class Person {
     var firstName = &quot;Nero&quot;

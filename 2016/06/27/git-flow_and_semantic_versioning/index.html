@@ -96,7 +96,7 @@
 版本格式：主版本号.次版本号.修订号 
 
 主版本号：当你做">
-<meta property="og:updated_time" content="2016-06-28T15:56:52.000Z">
+<meta property="og:updated_time" content="2016-06-29T10:37:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="版本控制及版本号的应用">
 <meta name="twitter:description" content="语义化版本 Semantic Versioning今天复习毛概，好无聊，就找了昨天看swift package manager上面有一个Semantic Versioning（语义化版本）的链接，讲了些版本号的格式，作用。原来对这版本号不是很了解，觉得这个东西蛮主观的，但现在发现原来还有这么大的用处，觉得这个可以很好地管理项目且很好理解。
@@ -380,11 +380,12 @@
 <ol>
 <li>主版本号：当你做了不兼容的 API 修改，</li>
 <li>次版本号：当你做了向下兼容的功能性新增，</li>
-<li>修订号：当你做了向下兼容的问题修正。</li>
-</ol>
+<li><p>修订号：当你做了向下兼容的问题修正。</p>
+<a id="more"></a>
 <p>注意点：（x.y.z）</p>
-<ol>
-<li>禁止在数字前方补零，如01</li>
+</li>
+<li><p>禁止在数字前方补零，如01</p>
+</li>
 <li>处于开发初始阶段时候用0.y.z，1.0.0</li>
 <li>y增加时，z归0。x增加时，y,z归0。</li>
 <li>修订号 Z（x.y.Z | x &gt; 0）“必须 MUST ”在只做了向下兼容的修正时才递增。</li>
