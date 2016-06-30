@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-30T08:11:01.000Z</updated>
+  <updated>2016-06-30T08:18:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/30/wwdc16_trip/"/>
     <id>http://yoursite.com/2016/06/30/wwdc16_trip/</id>
     <published>2016-06-30T07:30:00.000Z</published>
-    <updated>2016-06-30T08:11:01.000Z</updated>
+    <updated>2016-06-30T08:18:51.000Z</updated>
     
     <content type="html">&lt;p&gt;我是拿到了Apple Schoalrship，获得了免费的门票参加了这次WWDC。    &lt;/p&gt;
 &lt;p&gt;首先感谢&lt;a href=&quot;http://weibo.com/tualatrix&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@图拉鼎&lt;/a&gt;帮我联系到了组织，让我联系到了一起从上海、北京出发参加WWDC的大伙伴们。（这是我第一次出国，如果没有一起去的人应该还是会蛮担心的。）因为结识了他们，我们一起旅游，让我领略了加州的美丽景色，让我更充分地参加了WWDC。&lt;br&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/IMG_3538.JPG&quot; alt=&quot;&quot; title=&quot;WWDC代码墙&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -57,7 +57,7 @@ thanks(Set([&amp;quot;Developers From China&amp;quot;, &amp;quot;All scholars&am
 greatPleasureToMeet(Set(&amp;quot;Cook&amp;quot;, &amp;quot;Federighi&amp;quot;, &amp;quot;Williams&amp;quot;, &amp;quot;Geleynse&amp;quot;, &amp;quot;Cue&amp;quot;)) 
 greatPleasureToMeet(&amp;quot;Levicz&amp;quot;)  
 let nextTimeToSeeYou = &amp;quot;Very Soon&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot; title=&quot;相关链接&quot;&gt;&lt;/a&gt;相关链接&lt;/h2&gt;&lt;p&gt;TonyDuan的WWDC之旅: &lt;a href=&quot;http://www.jianshu.com/p/693296b41ff6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/693296b41ff6&lt;/a&gt;&lt;br&gt;@onevcat:iOS 10 SDK 新特性: &lt;a href=&quot;https://onevcat.com/2016/06/ios-10-sdk/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://onevcat.com/2016/06/ios-10-sdk/&lt;/a&gt;&lt;br&gt;@onevcat:写给初次参加 WWDC 的开发者的简明攻略: &lt;a href=&quot;https://onevcat.com/2016/04/first-wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://onevcat.com/2016/04/first-wwdc/&lt;/a&gt;&lt;br&gt;流利说@WWDC 2016: &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NjIzNDkwOA==&amp;amp;mid=2247483731&amp;amp;idx=1&amp;amp;sn=ce3597eefbbcd8489ea728b77c8b5814&amp;amp;scene=2&amp;amp;srcid=06265BRtyCzblvveQZnF8BQa&amp;amp;from=timeline&amp;amp;isappinstalled=0&amp;amp;key=77421cf58af4a653b6d43dcc288ae90d46f4ec86fa7df6d17d8daf99ed90ba3fcf4426f8da29d3abceb6427bfe28b99a&amp;amp;ascene=2&amp;amp;uin=MTcwOTQ4NTExNA%3D%3D&amp;amp;devicetype=iPhone+OS9.3.2&amp;amp;version=16031610&amp;amp;nettype=3G+&amp;amp;fontScale=100&amp;amp;pass_ticket=FglePbzGG3G2QclW%2FwgNdXGwxFGXfU5U7aX1Dhm7P6NmQDfhTpKdA2Li06oNoRfE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://mp.weixin.qq.com/s?__biz=MzI0NjIzNDkwOA==&amp;amp;mid=2247483731&amp;amp;idx=1&amp;amp;sn=ce3597eefbbcd8489ea728b77c8b5814&amp;amp;scene=2&amp;amp;srcid=06265BRtyCzblvveQZnF8BQa&amp;amp;from=timeline&amp;amp;isappinstalled=0&amp;amp;key=77421cf58af4a653b6d43dcc288ae90d46f4ec86fa7df6d17d8daf99ed90ba3fcf4426f8da29d3abceb6427bfe28b99a&amp;amp;ascene=2&amp;amp;uin=MTcwOTQ4NTExNA%3D%3D&amp;amp;devicetype=iPhone+OS9.3.2&amp;amp;version=16031610&amp;amp;nettype=3G+&amp;amp;fontScale=100&amp;amp;pass_ticket=FglePbzGG3G2QclW%2FwgNdXGwxFGXfU5U7aX1Dhm7P6NmQDfhTpKdA2Li06oNoRfE&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot; title=&quot;相关链接&quot;&gt;&lt;/a&gt;相关链接&lt;/h2&gt;&lt;p&gt;TonyDuan的WWDC之旅: &lt;a href=&quot;http://www.jianshu.com/p/693296b41ff6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/693296b41ff6&lt;/a&gt;&lt;br&gt;@onevcat:iOS 10 SDK 新特性: &lt;a href=&quot;https://onevcat.com/2016/06/ios-10-sdk/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://onevcat.com/2016/06/ios-10-sdk/&lt;/a&gt;&lt;br&gt;@onevcat:写给初次参加 WWDC 的开发者的简明攻略: &lt;a href=&quot;https://onevcat.com/2016/04/first-wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://onevcat.com/2016/04/first-wwdc/&lt;/a&gt;&lt;br&gt;流利说@WWDC 2016: &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NjIzNDkwOA==&amp;amp;mid=2247483731&amp;amp;idx=1&amp;amp;sn=ce3597eefbbcd8489ea728b77c8b5814&amp;amp;scene=2&amp;amp;srcid=06265BRtyCzblvveQZnF8BQa&amp;amp;from=timeline&amp;amp;isappinstalled=0&amp;amp;key=77421cf58af4a653b6d43dcc288ae90d46f4ec86fa7df6d17d8daf99ed90ba3fcf4426f8da29d3abceb6427bfe28b99a&amp;amp;ascene=2&amp;amp;uin=MTcwOTQ4NTExNA%3D%3D&amp;amp;devicetype=iPhone+OS9.3.2&amp;amp;version=16031610&amp;amp;nettype=3G+&amp;amp;fontScale=100&amp;amp;pass_ticket=FglePbzGG3G2QclW%2FwgNdXGwxFGXfU5U7aX1Dhm7P6NmQDfhTpKdA2Li06oNoRfE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
