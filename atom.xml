@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-30T09:19:05.000Z</updated>
+  <updated>2016-06-30T14:47:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/30/wwdc16_trip/"/>
     <id>http://yoursite.com/2016/06/30/wwdc16_trip/</id>
     <published>2016-06-30T07:30:00.000Z</published>
-    <updated>2016-06-30T09:19:05.000Z</updated>
+    <updated>2016-06-30T14:47:24.000Z</updated>
     
     <content type="html">&lt;p&gt;我是拿到了Apple Scholarship，获得了免费的门票参加了这次WWDC。    &lt;/p&gt;
 &lt;p&gt;首先感谢&lt;a href=&quot;http://weibo.com/tualatrix&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@图拉鼎&lt;/a&gt;帮我联系到了组织，让我联系到了一起从上海、北京出发参加WWDC的大伙伴们。（这是我第一次出国，如果没有一起去的人应该还是会蛮担心的。）因为结识了他们，我们一起旅游，让我领略了加州的美丽景色，让我更充分地参加了WWDC。&lt;br&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/IMG_3538.JPG&quot; alt=&quot;&quot; title=&quot;WWDC代码墙&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;最值得去的Lab也是最火的Lab是User Interface Design Lab，可以和苹果工程师一对一交流，但这是需要预约的，每天早上7点预约，day2那天早上我准时7点点开链接，在需要问的问题那一项想了1分钟（事后得知这个可以不写，不影响预约），Lab就被全部被预约了。day3我成功的预约到了，一见到那个设计师就觉得不一样，很有艺术感，经过30分钟交流收获还是蛮多的，给了不少建议，还给我在纸上画了很多，很形象。但是30分钟完全不够啊，还有两个页面没问，也没问一些学习设计的方法，途径。&lt;br&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/userinterfacelab.JPG&quot; alt=&quot;&quot; title=&quot;User Interface Design Lab&quot;&gt;&lt;br&gt;另外App for the World上，我们中国的很多开发者都聚在了一起，腾讯的，百度的，网易的，大疆的都来了，同时Apple大中华区的员工也来了。中国市场受到极大关注，别的国家的开发者也很重视中国市场，给我们推荐他们的app。我和其他中国开发者还上了WWDC的官方app呢&lt;br&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/wwdcphoto.PNG&quot; alt=&quot;wwdcapp&quot;&gt;  &lt;/p&gt;
 &lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;p&gt;原本参加这次WWDC的目的就不是学到什么技术，而是去感受WWDC的气氛，认识更多的人，聆听前辈的建议，多表达，多交流。这次参会也达到了自己的预期，整体还是比较满意的，因为英语不是很好，没有进一步的交流，留下了写遗憾。给点建议就是：多去参加lab，session回来看也可以。由于马上要期末考试了，没时间来试用新的特性，考试结束后，好好补补session，实践一下，也迫不及待给我的游戏RoDot添加一些新的特性。在会场基本上和所有的Apple高管都合影了(&lt;em&gt;^__^&lt;/em&gt;) &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/photoswithapple.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;感想&quot;&gt;&lt;a href=&quot;#感想&quot; class=&quot;headerlink&quot; title=&quot;感想&quot;&gt;&lt;/a&gt;感想&lt;/h2&gt;&lt;p&gt;这次WWDC之旅对我印象最深的不是Keynote, session , lab, Apple Engineers，而是Apple的人文情怀，对任何一个人的包容和尊重。大会前一天在佛罗里达州奥兰多的一家同性恋酒吧发生恶性枪击事件，在Bill Graham Civic Auditorium 旁边市政府还没降半旗时，Apple就降半旗了，甚至在本次 Keynote 开场时，库克让大家全体起立，向这次事件中的遇难者表示了哀悼。另外，Apple很注重User accessibility，Apple Design Award上让一个盲人演示了一个获奖的DJ app，和其他Scholar交流时，发现在评判Scholar的app时，User accessibility也是一个很重要的加分项。我在参加一个 Session 时，有个观众应该是聋哑人，在场有人背对着舞台，一边听着 Session 一边面对着他打手语。会场的灯全部灭了，只有那个打手语的人头顶的灯是亮着的。&lt;br&gt;Apple也开始开放了，Swift开源，今年还有两个Session:Going Server-side with Swift Open Source, Neural Networks and Accelerate，很欣喜Apple能推广其他平台上使用Swift。&lt;/p&gt;
+&lt;h2 id=&quot;感想&quot;&gt;&lt;a href=&quot;#感想&quot; class=&quot;headerlink&quot; title=&quot;感想&quot;&gt;&lt;/a&gt;感想&lt;/h2&gt;&lt;p&gt;这次WWDC之旅对我印象最深的不是Keynote, session , lab, Apple Engineers，而是Apple的人文情怀，对任何一个人的包容和尊重。大会前一天在佛罗里达州奥兰多的一家同性恋酒吧发生恶性枪击事件，在Bill Graham Civic Auditorium 旁边市政府还没降半旗时，Apple就降半旗了，甚至在本次 Keynote 开场时，库克让大家全体起立，向这次事件中的遇难者表示了哀悼。另外，Apple很注重User accessibility，Apple Design Award上让一个盲人演示了一个获奖的DJ app，和其他Scholar交流时，发现在评判Scholar的app时，User accessibility也是一个很重要的加分项。我在参加一个 Session 时，有个观众应该是聋哑人，在场有人背对着舞台，一边听着 Session 一边面对着他打手语。会场的灯全部灭了，只有那个打手语的人头顶的灯是亮着的。&lt;br&gt;对我们学生而言：Apple把美国梦诠释得很形象。&lt;br&gt;Apple也开始开放了，Swift开源，今年还有两个Session:Going Server-side with Swift Open Source, Neural Networks and Accelerate，很欣喜Apple能推广其他平台上使用Swift。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://nero5023.github.io/images/wwdc_trip/IMG_4351.png&quot; alt=&quot;&quot; title=&quot;Apple 降半旗&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;下半年打算&quot;&gt;&lt;a href=&quot;#下半年打算&quot; class=&quot;headerlink&quot; title=&quot;下半年打算&quot;&gt;&lt;/a&gt;下半年打算&lt;/h2&gt;&lt;p&gt;暑假找个公司好好实习一下，大三上学期弄个社团什么的，去用我的经历影响别人，也想和巴西那位帅哥一样弄个自己的公司折腾一下。&lt;/p&gt;
 &lt;h2 id=&quot;感谢&quot;&gt;&lt;a href=&quot;#感谢&quot; class=&quot;headerlink&quot; title=&quot;感谢&quot;&gt;&lt;/a&gt;感谢&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;thanks(Set([&amp;quot;Adam&amp;quot;, &amp;quot;Carl&amp;quot;, &amp;quot;Shook&amp;quot;, &amp;quot;Jason&amp;quot;, &amp;quot;Chun&amp;quot;, &amp;quot;Mika&amp;quot;])) 
